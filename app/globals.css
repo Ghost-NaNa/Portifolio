@@ -1,14 +1,40 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #C3B1F8;
+  --background: #1a1a1a;
+  --foreground: #262626;
+  --highlight: #C3B1F8;
+  --title: #B185DB;
+  --subtitle: #E2C6FF;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #C3B1F8;
+  }
+} */
+
+@theme {
+  --color-fundo-base: var(--background);
+  --color-card: var(--foreground);
+  --color-highlight: var(--highlight);
+  --color-titulo: var(--title);
+  --color-subtitle: var(--subtitle);
+
+
+  --animate-fade-in: fade-in 1s ease-in-out;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
